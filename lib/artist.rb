@@ -16,6 +16,7 @@ class Artist
   end
 
   def add_song(song)
+    raise ArgumentError, 'Argument is not a Song' unless song.is_a? Song
     self.songs << song
   end
 

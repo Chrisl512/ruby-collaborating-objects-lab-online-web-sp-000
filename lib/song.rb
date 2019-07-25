@@ -12,7 +12,7 @@ class Song
     song_info = file.chomp(".mp3").split(" - ")
     song = Song.new(song_info[1])
     song.artist = Artist.find_or_create_by_name(song_info[0])
-    song.artist.add_song(self)
+    song.artist.add_song(song)
     song
   end
 
